@@ -92,7 +92,7 @@ const App = () => {
           // imgItems: [...prevState.imgItems, ...response.data.hits],
           // showBtn:  true
           // }))
-        setImgItems([...imgItems, ...response.data.hits])
+        setImgItems(imgItems => [...imgItems, ...response.data.hits])
         setShowBtn(true)
          scroll.scrollToBottom()
       } catch(error)  {
